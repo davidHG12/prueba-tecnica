@@ -24,6 +24,7 @@ export const create = (req, res, next) => {
     .create(req.body)
     .then(c => res.json(c))
     .catch(next);
+  res.status(200).send('Contact created successfully');
 };
 
 export const update = (req, res, next) => {
@@ -34,9 +35,9 @@ export const update = (req, res, next) => {
     .then(async contact => {
       if (contact) {
         await contactModel.update(newContact, { where: { id } });
-        res.status(200).send();
+        res.status(200).send('Contact updated');
       } else {
-        res.status(404).send();
+        res.status(404).send(`Contact with id ${id} not found!`);
       }
     })
     .catch(next);
@@ -46,6 +47,6 @@ export const deleteContact = (req, res, next) => {
   const id = req.params.contactId;
   contactModel
     .destroy({ where: { id } })
-    .then(res.status(200).send())
+    .then(res.status(200).send('Contact deleted'))
     .catch(next);
 };
