@@ -13,3 +13,17 @@ Para ejecutar la aplicación en primer lugar es necesario crear la base de datos
     2.1 crearDB
     2.2 crearTabla
     2.3 crearRegistros
+    
+    
+  3. Abrir la consola y ubicarse en la ruta donde haya guardado el repositorio. Subir al nivel de la carpeta backend y ejecutar el siguiente comando o script:
+
+    npm start
+    
+  4. Abrir otro terminal dejando el anterior ejecutando en segundo plano. Repetir el mismo procedimiento, es decir, entrar a la ruta del repositorio pero esta vez subr al nivel de la carpeta frontend y ejecutar el comando o script:
+
+    npm start
+    
+Con esto ya puede hacer uso de la aplicación.
+
+
+
